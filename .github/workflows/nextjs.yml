@@ -32,6 +32,11 @@ jobs:
         run: |
           npm run build
 
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/out
+
   deploy:
     environment:
       name: github-pages
